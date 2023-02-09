@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1312</width>
+    <height>758</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(36, 41, 50)</string>
+  </property>
+  <widget class="QPushButton" name="button_nahrat">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>NAHRÁT SOUBOR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_nazev">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>631</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Název souboru + přípona</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_cesta">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>631</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Cesta k souboru</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_velikost">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>631</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Velikost souboru</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_datum_uprav">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>631</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Datum poslední úpravy</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_podepsat">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>420</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>PODEPSAT SOUBOR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_podepsano">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>510</y>
+     <width>391</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Podpis proběhl v pořádku</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_overit_podpis">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>440</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>OVĚŘIT PODPIS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_hash_zpravy">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>520</y>
+     <width>711</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>HASH ZPRÁVY - ten kterej musim ze zpravy zase udelat pri overeni</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_hash_desifrovan">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>590</y>
+     <width>711</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>DEŠIFROVANÝ HASH - ten co me vypadne desifrovanim</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_restart">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>560</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	
+	background-color: rgb(213, 20, 78);
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:red;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>RESTARTOVAT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="true_false_finish_label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>650</y>
+     <width>1161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>OVĚŘENÍ PODPISU PROBĚHLO! SOUBOR NEBYL MODIFIKOVÁN... </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nadpis">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>20</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>DSA - DRÁBKOVÁ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Název souboru</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Cesta k souboru</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Velikost souboru</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Datum poslední úpravy</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>490</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Hash zprávy</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label8">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>560</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Hash získaný dešifrováním</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label5">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>260</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Privátní klíč</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_generovat">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>360</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>GENEROVAT KLÍČE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_nahrat_elpodpis">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>70</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>NAHRÁT ELEKTRONICKÝ PODPIS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_nahrat_klice">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>240</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>NAHRÁT PRIVÁTNÍ KLÍČ K DEŠIFROVÁNÍ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_privatni_klic">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>300</y>
+     <width>551</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Privatni klic</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_privatni_klic_2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>380</y>
+     <width>551</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>&quot;N&quot;ko</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label5_2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>340</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>&quot;N&quot;ko</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_signaturesgn">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>180</y>
+     <width>551</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Nahrali a rozbalili jste soubor signature.sgn</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_messagemsg">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>130</y>
+     <width>551</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Nahrali a rozbalili jste soubor message.msg</string>
+   </property>
+  </widget>
+  <zorder>label_datum_uprav</zorder>
+  <zorder>label_velikost</zorder>
+  <zorder>button_nahrat</zorder>
+  <zorder>label_nazev</zorder>
+  <zorder>label_cesta</zorder>
+  <zorder>button_podepsat</zorder>
+  <zorder>label_podepsano</zorder>
+  <zorder>button_overit_podpis</zorder>
+  <zorder>label_hash_zpravy</zorder>
+  <zorder>label_hash_desifrovan</zorder>
+  <zorder>button_restart</zorder>
+  <zorder>true_false_finish_label</zorder>
+  <zorder>nadpis</zorder>
+  <zorder>label1</zorder>
+  <zorder>label2</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label7</zorder>
+  <zorder>label8</zorder>
+  <zorder>Label5</zorder>
+  <zorder>button_generovat</zorder>
+  <zorder>button_nahrat_elpodpis</zorder>
+  <zorder>button_nahrat_klice</zorder>
+  <zorder>label_privatni_klic</zorder>
+  <zorder>label_privatni_klic_2</zorder>
+  <zorder>Label5_2</zorder>
+  <zorder>label_signaturesgn</zorder>
+  <zorder>label_messagemsg</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

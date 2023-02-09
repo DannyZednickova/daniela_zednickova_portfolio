@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1281</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(36, 41, 50)</string>
+  </property>
+  <widget class="QLineEdit" name="klic">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>691</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="otevrenyText">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>691</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sifrovatButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>490</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>ŠIFROVAT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="desifrovatButton">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>490</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>DEŠIFROVAT</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="sifrovanyText">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>80</y>
+     <width>521</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelKlicInput">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Klíč</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTextInput">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="abecedaInput">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>691</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAbecedaInput">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>310</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Chci vlozit abecedu</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSifraOutput">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>50</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Šifra</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTableOutput">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>210</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Tabulka abecedy</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboMatrix">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>550</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+border:1px solid transparent;
+border-radius: 2px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+}
+
+QComboBox QListView {
+color: rgb(97, 97, 97);
+}
+
+
+
+QComboBox::down-arrow
+{
+image: url(D:/PROGRAMOVANI/DRUHAK/KRYPTO/PYTHON/AGDX_sifra/down-chevron.png);
+width: 20px;
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>ADFGV</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADFGVX</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboLanguage">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>550</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+border:1px solid transparent;
+border-radius: 2px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+}
+
+
+
+QComboBox QListView {
+color: rgb(97, 97, 97);
+}
+
+QComboBox::down-arrow
+{
+image: url(D:/PROGRAMOVANI/DRUHAK/KRYPTO/PYTHON/AGDX_sifra/down-chevron.png);
+width: 20px;
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>CZ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ENG</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="nadpis">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>ADFGV(X) - DRÁBKOVÁ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="warning">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>620</y>
+     <width>1231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>WARNING</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tabulkaAbecedy">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>240</y>
+     <width>521</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget{
+border:1px solid white;
+color: #FFF;
+
+
+}
+QHeaderView::section {
+background-color:rgb(36, 41, 50);
+color: #FFF;
+}
+
+QTableWidget QTableCornerButton::section {
+background-color:rgb(36, 41, 50);
+
+
+}</string>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
+   </property>
+   <row>
+    <property name="text">
+     <string>New Row</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>New Column</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="labelAbecedaInput_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>400</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Použitá abeceda</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPouzitaAbeceda">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>681</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>POUŽITÁ ABECEDA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="zobrazeniSifer">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>700</y>
+     <width>1231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>ZAŠIFROVANÝ / DEŠIFROVANÝ TEXT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="restartButton">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>560</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	
+	background-color: rgb(213, 20, 78);
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:red;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>RESTARTOVAT</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>892</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(36, 41, 50)
+</string>
+  </property>
+  <widget class="QLineEdit" name="VerejnyKlic">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>441</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PrivatniKlic">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>90</y>
+     <width>441</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="GenerovatKlice">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>240</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>GENEROVAT KLÍČE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelVerejnyKlic">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Veřejný klíč</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrivatniKlic">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>60</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Privátní klíč</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="otevrenyText">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>931</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SifrovanText">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>931</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sifrovatButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>530</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>ŠIFROVAT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="desifrovatButton">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>530</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>DEŠIFROVAT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrivatniKlic_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Otevřený text</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrivatniKlic_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>400</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Šifrovaný text</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nadpis">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>RSA ŠIFRA - DRÁBKOVÁ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="warning">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>740</y>
+     <width>911</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>OUTPUT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="restartButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>840</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color:rgb(148, 148, 148);
+	border-radius: 20px;
+	
+	background-color: rgb(213, 20, 78);
+	border: 1px solid rgb(148, 148, 148);
+}
+QPushButton:hover{
+	color:red;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>RESTARTOVAT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="warning_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>600</y>
+     <width>911</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Chary převedené na bináry</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="warning_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>670</y>
+     <width>911</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: rgb(153, 227, 113);
+}</string>
+   </property>
+   <property name="text">
+    <string>Velmi dlouhé číslo z bináru na decimal</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nklic">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>180</y>
+     <width>441</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+border:1px solid white;
+border-radius: 20px;
+color: #FFF;
+padding-left:10px;
+padding-right: 10px;
+padding-top:10px;
+padding-bottom:10px;
+
+
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrivatniKlic_4">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>150</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Člen N</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
