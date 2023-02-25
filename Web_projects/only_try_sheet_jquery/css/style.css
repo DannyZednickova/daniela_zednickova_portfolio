@@ -1,0 +1,599 @@
+/**
+ * GENERAL
+ */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  width: 1200px;
+  margin:  0 auto;
+	color: black;
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: white;
+}
+
+
+.zoznam {
+	margin-top: 50px;
+}
+
+.highlight {
+	color:  green;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+  color: black;
+	
+}
+.jokes {
+	display: block;
+	width: 500px;
+	height:auto;
+
+}
+
+dt {
+	padding:1em;
+	background: #1C6EA4;
+
+}
+
+dd {
+
+	padding:2em;
+	background: #e5e5e5;
+	margin-left: 0;
+	font-weight: lighter;
+
+
+}
+
+.copy{
+	display:block;
+	width:300px;
+	min-height: 30px;
+	border: 1px dotted black;
+	padding: 1em;
+}
+
+
+.hybese{
+	margin: 2em;
+	background: orange;
+	color: white;
+	width: 8em;
+	height: 4em;
+	position:  relative;
+
+}
+
+p {
+	position: absolute;
+	margin-left: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+/*HYBAJÍCÍ SE IKONKY YABLKO A JA (KLIK ON BUTTON AND ACTION)*/
+
+.icon {
+	position: fixed;
+	top: 70%;
+	left: 50%;
+	margin: -60px;
+	display: none;
+}
+
+.hybese {
+	position: relative;
+}
+
+
+
+.justin {
+	position: relative;
+}
+
+.loadin {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -60px;
+	display: none;
+}
+
+
+
+
+
+
+
+/*ANIMACE 3 SLOUPCŮ ZE SPOD UKRADNUTÉ*/
+/*clearfixes*/
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  width: 30%;
+  margin: 0% 1.33 2.66% 1.33%;
+  float: left;
+}
+/*3 grid layout*/
+
+.animation-element:nth-of-type(3n-2) {
+  width: 31.5%;
+  margin: 0% 1.375% 2.75% 0%;
+  clear: left;
+}
+
+.animation-element:nth-of-type(3n-1) {
+  width: 31.5%;
+  margin: 0% 1.375% 2.75% 1.375%;
+}
+
+.animation-element:nth-of-type(3n-0) {
+  width: 31.5%;
+  margin: 0% 0% 2.75% 1.375%;
+  clear: right;
+}
+/*bounce up animation for the subject*/
+
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.subject {
+  float: left;
+  width: 100%;
+  margin: 0% 1.33% 2.66% 1.33%;
+  background: #F5F5F5;
+  padding: 15px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border: solid 1px #EAEAEA;
+}
+
+
+/*media queries for small devices*/
+
+@media screen and (max-width: 678px) {
+  .main-container {
+    margin: 20px 15px;
+  }
+  .animation-element,
+  .animation-element:nth-of-type(3n-1),
+  .animation-element:nth-of-type(3n-2),
+  .animation-element:nth-of-type(3n-0) {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
+  .subject .header .date,
+  .subject .header .category {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*GALERIE  */
+
+.galerie {
+  font-size: 0;
+
+}
+
+.galerie img {
+  max-width: 100%;
+  width: 33.333333%;
+  opacity: 0.7;
+
+
+}
+
+
+.playimg {
+  position: relative;
+  padding: 3em;
+}
+
+.playimg img {
+  max-width: 20%;
+}
+
+
+.progressbar {
+  display: block;
+  width: 0%;
+  height: 2em;
+  position: relative;
+  margin: 1em;
+  background:  black;
+
+}
+
+
+
+#overlaydva {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 2;
+  display: none;
+  text-align: center;
+}
+
+#overlaydva img {
+  max-width: 40%;
+  margin-top: 10em;
+}
+
+
+
+/*LOADING YABLKO *//
+
+.button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -125px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.button {
+    color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+background: #ed3330;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+font-weight: bold;
+margin-bottom: 2em;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 2;
+  display: none;
+}
+
+.progress {
+  border: 5px solid #000;
+  border-radius: 5px;
+  width: 600px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -30px;
+  background: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, .9);
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  width: 0%;
+  height: 100%;
+  background: rgb(126, 208, 169);
+}
+
+
+
+
+/*MUJ VADNY LOADING*/
+
+.buttondva {
+    color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+background: #ed3330;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+font-weight: bold;
+margin-bottom: 2em;
+cursor: pointer;
+
+
+}
+
+
+.drzic {
+  position:  relative;
+  background: white;
+  width: 600px; 
+  height: 60px;
+  background: white;
+  border: 1px solid black;
+ margin: 1em;
+
+}
+
+
+.nacitac {
+  display: none;
+  position: relative;
+  width: 0;
+  height: 100%;
+  background: black;
+}
+
+
+
+ 
+
+
+/*SCROLOVÁNÍ FUNKCE */
+
+
+
+.controls {
+  width: 100%;
+  margin: 3.125em 0; /* 50/16 */
+  text-align: center;
+}
+
+.controls li {
+  float: none;
+  display: inline-block;
+}
+
+.controls a {
+  font-size: 1.375em; /* 22/16 */
+  font-weight: 300;
+  color: #39a3d4;
+  text-transform: uppercase;
+  padding: 0 1.1363636363636365em; /* 25/22 */
+  line-height: 2.1818181818181817em; /* 48/22 */
+  display: block;
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls .selected a {
+  color: #fff;
+  background: #39a3d4;
+  border-radius: 0.18181818181818182em /* 4/22 */
+}
+
+.gallery {
+  font-size: 0;
+}
+
+.gallery img {
+  width: 33.333333333%;
+  max-width: 100%;
+  opacity: .85;
+}
+
+.gallery-set {
+  margin-bottom: 75px;
+}
+
+.gallery-set:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/*scroll*/
+
+
+.back-to-top {
+  font-size: 4em;
+  display: block;
+  color: red;
+  position:  fixed;
+  bottom: 5px;
+  right: 20px;
+  display:  block;
+  opacity:  0.85;
+}
+
+
+.back-to-top:hover,
+.back-to-top:focus {
+  opacity: 1;
+  transition:  opacity 0.2;
+
+}
+
+
+
+
+.fadecover {
+  background-size: contain;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 1200px;
+  z-index: -1000;
+
+
+}
+.cover {
+ 
+  width:  1920px;
+  height: 1200px;
+  position: absolute;
+  top: 0;
+  left: 50%: 
+  margin: -960px;
+}
+
+
+
+/*animace*/
+
+.odleti,
+.hybesenaklik {
+  display: block;
+  width: 200px;
+  height: 150px;
+  background: yellow;
+  border-radius: 10%;
+}
+
+.tocimsenaklik {
+    display: block;
+  width: 200px;
+  height: 150px;
+  background: yellow;
+  border-radius: 10%;
+
+  }
+
+  .round-round-baby {
+
+     animation:  spin 1s infinite linear;
+
+  }
+
+ 
+
+@keyframes spin {
+  0% { transform:  rotate(0deg); }
+  100% { transform:  rotate(360deg); }
+
+}
+
+
+.animpozad {
+    display: block;
+  width: 200px;
+  height: 150px;
+  background: yellow;
+  border-radius: 10%;
+
+  }
+
+
+
+  .pulse {
+
+     animation:  pulse 1s infinite linear;
+
+  }
+
+ 
+
+@keyframes pulse {
+  0% { transform:  scale3d(1,1, 1); }
+  100% { transform:  scale3d(1.5,1.5, 1.5);}
+
+}
+
+
+
+
+/*moje navigace*/
+
+
+
+.current {
+    text-decoration: underline;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+#cerna {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 2;
+  display: none;
+}
+
+.overlayphoto {
+  margin: 10em;
+  
+}
