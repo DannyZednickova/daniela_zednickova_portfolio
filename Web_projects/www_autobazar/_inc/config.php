@@ -23,8 +23,9 @@ define('BASE_URL', 'http://localhost/www_autobazar');
 define('APP_PATH', realpath(__DIR__ . '/../'));
 
 
+
 // database 'autobazar; for real shit
-$databaseAD = new PDO('mysql:host=localhost;dbname=autobazar;charset=utf8mb4', 'root', 'root');
+$databaseAD = new PDO('mysql:host=localhost;dbname=autobazar;charset=utf8mb4', 'root', '');
 $databaseAD->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $databaseAD->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 

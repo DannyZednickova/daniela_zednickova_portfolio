@@ -1,0 +1,8 @@
+Password and login database: root 
+For XAMPP : there is no password!
+
+For user loggin:
+http://localhost/www_autobazar/login  == test@test.cz  password testtest
+
+
+

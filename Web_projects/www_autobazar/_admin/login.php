@@ -7,11 +7,12 @@
 include_once __DIR__ . "/../_partials/header_sm.php";
 
 
+//test@test.cz heslo testtest
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // nefunguje... nwm proc to nevidi $auth ... kdyz to vlastne vidi auth... a potrebuju se zbavit odesilani emailu...
     try {
-        $auth->login($_POST['email'], $_POST['password']);  //pass 82008200aA-
+        $auth->login($_POST['email'], $_POST['password']);
 
         echo 'User is logged in';
     } catch (\Delight\Auth\InvalidEmailException $e) {
