@@ -1,12 +1,12 @@
 import hashlib
 import time
-import base64
+import rsa_dsa
 import os
 from os.path import basename
 import zipfile
+import base64
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox
-import rsa_dsa
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
 
 
 class Ui_Form(QMainWindow):
@@ -15,21 +15,23 @@ class Ui_Form(QMainWindow):
         """
         This function load message that is about to be signed.
         """
+
         options = QFileDialog.Options()
-        file_name, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
+        fileName, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
                                                   "All Files (*)", options=options)
         self.hashed_line = ""
-        if file_name:
-            self.path_of_message = file_name
-            self.name_of_message = os.path.basename(file_name)
-            file_size = str(os.path.getsize(file_name))
-            file_name = os.path.basename(file_name)
-            modified = os.path.getmtime(file_name)
+        if fileName:
+            # print(fileName)
+            self.path_of_message = fileName
+            self.name_of_message = os.path.basename(fileName)
+            file_size = str(os.path.getsize(fileName))
+            file_name = os.path.basename(fileName)
+            modified = os.path.getmtime(fileName)
             time_modified = time.ctime(modified)
 
-            with open(file_name, 'rb', encoding="utf-8") as f:
+            with open(fileName, 'rb') as f:
                 self.label_nazev.setText(file_name)
-                self.label_cesta.setText(file_name)
+                self.label_cesta.setText(fileName)
                 self.label_velikost.setText(file_size)
                 self.label_datum_uprav.setText(time_modified)
                 lines = f.readlines()
@@ -48,38 +50,63 @@ class Ui_Form(QMainWindow):
             name_message = self.name_of_message
             path_message = path_message.replace(name_message, "")
             generovani = rsa_dsa.generate_keys()
+
             self.nko = generovani[0]
             self.dcko = generovani[1]  # private - SIFROVANI
             self.ecko = generovani[2]  # PUBLIC - desifrovani
+            print("nko: ", self.nko)
+            print("dcko: ", self.dcko)
+            print("ecko:", self.ecko)
+
+            message_bytes = str(self.nko).encode('ascii')
+            base64_bytes = base64.b64encode(message_bytes)
+            base64_nko = base64_bytes.decode('ascii')
+            print(base64_nko)
+
+            message_bytes = str(self.dcko).encode('ascii')
+            base64_bytes = base64.b64encode(message_bytes)
+            base64_dcko = base64_bytes.decode('ascii')
+            print(base64_dcko)
+
+            message_bytes = str(self.ecko).encode('ascii')
+            base64_bytes = base64.b64encode(message_bytes)
+            base64_ecko = base64_bytes.decode('ascii')
+            print(base64_ecko)
 
             try:
-                save_key_private = open(path_message + "private.priv", "w", encoding="utf-8")
-                save_key_private.write(str(self.dcko))
+
+                save_key_private = open(path_message + "private.priv", "w")
+                save_key_private.write(str(base64_dcko))
                 save_key_private.write("\n")
-                save_key_private.write(str(self.nko))
+                save_key_private.write(str(base64_nko))
                 save_key_private.close()
-                save_key_public = open(path_message + "public.publ", "w", encoding="utf-8")
-                save_key_public.write(str(self.ecko))
+
+                save_key_public = open(path_message + "public.publ", "w")
+                save_key_public.write(str(base64_ecko))
                 save_key_public.write("\n")
-                save_key_public.write(str(self.nko))
+                save_key_public.write(str(base64_nko))
                 save_key_public.close()
-            except ImportError:
-                self.label_podepsano.setText("Něco se nepovedlo p5i generování klíče!")
+            except:
+                self.label_podepsano.setText("Něco se nepovedlo pči generování klíče!")
                 QMessageBox.about(self, "Klíče", "Něco se nepovedlo při generování klíče")
 
             with zipfile.ZipFile(path_message + "/public_zip.zip", mode="w") as archive:
                 archive.write(path_message + "/public.publ", basename("public.publ"))
+
             with zipfile.ZipFile(path_message + "/private_zip.zip", mode="w") as archive2:
                 archive2.write(path_message + "/private.priv", basename("private.priv"))
-            if os.path.exists(path_message + 'public.publ') is True and os.path.exists(
-                    path_message + 'private.priv') is True and os.path.exists(
-                path_message + 'private_zip.zip') is True and os.path.exists(
-                path_message + 'private_zip.zip') is True:
+
+
+            if os.path.exists(path_message + 'public.publ') == True and os.path.exists(
+                    path_message + 'private.priv') == True and os.path.exists(
+                    path_message + 'private_zip.zip') == True and os.path.exists(
+                    path_message + 'private_zip.zip') == True:
                 QMessageBox.about(self, "Klíče", "Klíče byly generovány a zazipovány.")
             elif os.stat(path_message + 'public.publ').st_size == 0 or os.stat(
                     path_message + 'private.priv').st_size == 0:
                 QMessageBox.about(self, "Klíče", "Něco neproběhlo v pořádku. Klíče se nevygenerovaly.")
-        except ImportError:
+
+        except:
             QMessageBox.about(self, "Klíče", "Nelze generovat klíče bez zprávy... ")
 
     def sign_document(self):
@@ -91,29 +118,38 @@ class Ui_Form(QMainWindow):
             path_message = self.path_of_message
             name_message = self.name_of_message
             path_message = path_message.replace(name_message, "")
+
             try:
                 signature = rsa_dsa.cipher_math(rsa_dsa.cipher_func(hashed), self.dcko, self.nko)
+
                 message_bytes = signature.encode('ascii')
                 base64_bytes = base64.b64encode(message_bytes)
                 base64_message = base64_bytes.decode('ascii')
-                flile_name = open(path_message + "/signature.sign", "w", encoding="utf-8")
-                flile_name.write(base64_message)
-                flile_name.close()
-            except ImportError:
+
+                fileName = open(path_message + "/signature.sign", "w")
+                fileName.write(base64_message)
+                fileNamePath = path_message + "/signature.sign"
+                fileName.close()
+            except:
 
                 QMessageBox.about(self, "Podpis ", "Něco se nepovedlo, podpis neproběhl")
-            with zipfile.ZipFile("outputs_from_dsa/sign.zip", mode="w") as archive:
-                archive.write("outputs_from_dsa/message.msg", basename("message.msg"))
-                archive.write("outputs_from_dsa/signature.sign", basename("signature.sign"))
-            if os.path.exists(path_message + 'sign.zip') is True and os.stat(path_message + 'sign.zip').st_size > 0:
+
+
+            with zipfile.ZipFile("TEST_message/sign.zip", mode="w") as archive:
+                archive.write("TEST_message/message.msg", basename("message.msg"))
+                archive.write("TEST_message/signature.sign", basename("signature.sign"))
+
+            if os.path.exists(path_message + 'sign.zip') == True and os.stat(path_message + 'sign.zip').st_size > 0:
                 QMessageBox.about(self, "Podpis", "Dokument byl podepsán a zazipován společně se zprávou.")
                 self.label_podepsano.setText("Dokument je podepsán a uložen. Vše proběhlo v pořádku.")
             else:
                 QMessageBox.about(self, "Podpis",
                                   "Dokument nelze podepsat. Zkontrolujte, zda jsou generovány klíče a nahrána zpráva.")
-        except ImportError:
+
+        except:
             QMessageBox.about(self, "Podpis",
                               "Dokument nelze podepsat. Zkontrolujte, zda jsou generovány klíče a nahrána zpráva.")
+
 
     def signature_open(self):
         """
@@ -122,61 +158,95 @@ class Ui_Form(QMainWindow):
         """
         try:
             options = QFileDialog.Options()
-            file_name_sign, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
-                                                            "All Files (*)", options=options)
+            fileNameSign, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
+                                                          "All Files (*)", options=options)
             self.path_of_signature = ""
-            if file_name_sign:
-                file_zipped = os.path.basename(file_name_sign)
-                self.path_of_signature = file_name_sign
+            if fileNameSign:
+
+                file_zipped = os.path.basename(fileNameSign)
+                self.path_of_signature = fileNameSign
+                path_signature = self.path_of_signature
                 self.path_of_signature = self.path_of_signature.replace(file_zipped, "")
-                with zipfile.ZipFile(file_name_sign, 'r') as zip_obj:
-                    zip_obj.extractall(self.path_of_signature)
+
+                #
+                with zipfile.ZipFile(fileNameSign, 'r') as zipObjec:
+
+                    zipObjec.extractall(self.path_of_signature)
+
+            name_signature = os.path.basename(fileNameSign)
+            name_message = os.path.basename(self.path_of_signature + "message.msg")
             self.hashed_tranfered_line = ""
-            with open(self.path_of_signature + "message.msg", 'rb', encoding="utf-8") as f:
+            print(self.path_of_signature)
+            with open(self.path_of_signature + "message.msg", 'rb') as f:
                 lines = f.readlines()
                 for line in lines:
+                    # print(line)
                     self.hashed_tranfered_line = hashlib.sha256(line.rstrip()).hexdigest()
             print(self.hashed_tranfered_line)
+            f.close()
 
             self.label_hash_zpravy.setText(self.hashed_tranfered_line)
             if self.hashed_tranfered_line:
                 QMessageBox.about(self, "Hash zpravy", "Hash zpravy byl proveden.")
-        except ImportError:
+        except:
             QMessageBox.about(self, "Podpis", "Nelze otevřít dokument pro ověření... ")
 
-    def load_private_key(self):
+    def load_public_key(self):
         """
         Loads private key to use it to deciphered the signature.
         """
         try:
             options = QFileDialog.Options()
-            file_name_sign, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
-                                                            "All Files (*)", options=options)
+            fileNameSign, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "",
+                                                          "All Files (*)", options=options)
             path_of_private_key = ""
-            if file_name_sign:
-                file_zipped = os.path.basename(file_name_sign)
-                path_of_private_key = file_name_sign
+            if fileNameSign:
+                # print(os.path.basename(fileNameSign))
+                # print(fileNameSign) #D:/PROGRAMOVANI/DRUHAK/KRYPTO/DSA/overeni_dsa_test/signed.zip
+                file_zipped = os.path.basename(fileNameSign)
+                path_of_private_key = fileNameSign
                 path_of_private_key = path_of_private_key.replace(file_zipped, "")
-                with zipfile.ZipFile(file_name_sign, 'r') as zip_obj:
-                    zip_obj.extractall(path_of_private_key)
+                # print(path_of_signature) #D:/PROGRAMOVANI/DRUHAK/KRYPTO/DSA/overeni_dsa_test/
+                #
+                with zipfile.ZipFile(fileNameSign, 'r') as zipObj:
+                    # Extract all the contents of zip file in different directory
+                    zipObj.extractall(path_of_private_key)
+            # print(path_of_private_key)
+
             tmp = []
-            with open(path_of_private_key + "public.publ", 'rb') as f_file:
-                lines = f_file.readlines()
+            with open(path_of_private_key + "public.publ", 'rb') as f:
+                lines = f.readlines()
                 for line in lines:
-                    tmp.append(int(line))
-            self.ecko_decipher = tmp[0]
-            self.nko_decipher = tmp[1]
+                    line = line.rstrip()
+                    line = line.decode()
+                    tmp.append(line)
+            print(tmp)
+            f.close()
+
+            ecko_decipher = str(tmp[0])
+            nko_decipher = str(tmp[1])
+
+            print(ecko_decipher)
+
+            base64_message = ecko_decipher
+            base64_bytes = base64_message.encode('ascii')
+            message_bytes = base64.b64decode(base64_bytes)
+            self.ecko_decipher = message_bytes.decode('ascii')
+
+            base64_message = nko_decipher
+            base64_bytes = base64_message.encode('ascii')
+            message_bytes = base64.b64decode(base64_bytes)
+            self.nko_decipher = message_bytes.decode('ascii')
+
             self.label_privatni_klic.setText(str(self.ecko_decipher))
             self.label_privatni_klic_2.setText(str(self.nko_decipher))
-        except ImportError:
+        except:
             QMessageBox.about(self, "Privátní klíč",
                               "Nelze nahrát klíč pro dešifrování. Zkontrolujte, zda máte vše potřebné... ")
 
     def verify_signature(self):
-        """
-        This function then compare hashed message with deciphered signature, if its equal, than the document.
-        """
         try:
+            # print(self.path_of_signature)
             signature = ""
             with open(self.path_of_signature + "signature.sign", 'rb') as f:
                 lines = ""
@@ -190,9 +260,13 @@ class Ui_Form(QMainWindow):
             message_bytes = base64.b64decode(base64_bytes)
             message = message_bytes.decode('ascii')
             message = str(message)
+            print(message)
+            print(self.ecko_decipher)
+            print(self.nko_decipher)
 
             self.verified_message = rsa_dsa.decipher_func(
-                rsa_dsa.decpher_math(message, self.ecko_decipher, self.nko_decipher))
+                rsa_dsa.decpher_math(message, int(self.ecko_decipher), int(self.nko_decipher)))
+            # print(self.verified_message)
             self.label_hash_desifrovan.setText(self.verified_message)
 
             if self.hashed_tranfered_line == self.verified_message:
@@ -203,13 +277,10 @@ class Ui_Form(QMainWindow):
                 self.true_false_finish_label.setText("OVĚŘENÍ SE NEZDAŘILO!! JE TO VŠECKO ŠPATNĚ!")
                 QMessageBox.about(self, "Ověření dokumentu", "OVĚŘENÍ SE NEZDAŘILO!! JE TO VŠECKO ŠPATNĚ! ")
 
-        except ImportError:
+        except:
             QMessageBox.about(self, "Ověření dokumentu", "Dokument nelze ověřit, nahráli jste vše potřebné?  ")
 
     def setupUi(self, Form):
-        """
-        GUI.
-        """
         Form.setObjectName("Form")
         Form.resize(1312, 758)
         Form.setStyleSheet("background-color:rgb(36, 41, 50)")
@@ -447,7 +518,7 @@ class Ui_Form(QMainWindow):
                                                "\n"
                                                "}")
         self.button_nahrat_klice.setObjectName("button_nahrat_klice")
-        self.button_nahrat_klice.clicked.connect(self.load_private_key)
+        self.button_nahrat_klice.clicked.connect(self.load_public_key)
         self.label_privatni_klic = QtWidgets.QLabel(Form)
         self.label_privatni_klic.setGeometry(QtCore.QRect(690, 300, 551, 21))
         self.label_privatni_klic.setStyleSheet("QLabel {\n"
@@ -516,9 +587,6 @@ class Ui_Form(QMainWindow):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
-        """
-        GUI.
-        """
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.button_nahrat.setText(_translate("Form", "NAHRÁT SOUBOR"))
