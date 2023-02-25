@@ -1,0 +1,2 @@
+01 01 2021
+- uprava package PHP AUTH - disabled isBlocked function!!! so once this is updated via composer - i am fucked

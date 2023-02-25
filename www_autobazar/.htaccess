@@ -1,0 +1,21 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+RewriteBase /www_autobazar/
+
+# Protect application and system files from being viewed
+RewriteRule ^(_inc) - [F,L]
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/
+RewriteRule .* index.php/$0 [PT,L]
+
+# ERROR PAGE 
+ErrorDocument 404 /404.html
+
+# set an include_path because of MAMP - this is for NOW - it needs to be solved once uploaded on real server
+php_value include_path '.;C:\php\pear;C:\www\www_autobazar'

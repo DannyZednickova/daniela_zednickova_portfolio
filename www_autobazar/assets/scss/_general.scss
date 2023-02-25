@@ -1,0 +1,82 @@
+@import 'variables.scss';
+
+
+/**
+ * GENERAL
+ */
+html {
+	box-sizing: border-box;
+    font-size: 100%;
+    color:$font-color;
+    font-family: Calibri,Arial,sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body{
+  background-color: #f7f5f5;
+}
+h4 {
+    color:$general-color;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h6 {
+  line-height: 1.7;
+}
+
+blockquote {
+
+	font-size: 1em;
+
+}
+
+html,
+body,
+header,
+.view {
+}
+
+
+ul {
+	list-style:none;
+
+}
+
+
+a {
+	color: $general-color;
+    text-decoration: none;
+    background-color: transparent;
+    &:hover {
+    	color: $color-link-hover;
+    	text-decoration: none;
+    }
+}
+
+
+
+small {
+    font-size:0.5em;
+}
+
+
+.left {
+        float:left;
+}
+
+
+.right {
+        float:right;
+
+}
+
+
+
+hr {
+     border-top: 1px dotted red;
+     margin:1em 3em 1em 3em;
+}

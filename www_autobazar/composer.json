@@ -1,0 +1,7 @@
+{
+    "require": {
+        "tamtamchik/simple-flash": "^2.0",
+        "bramus/router": "~1.5",
+        "delight-im/auth": "^8.2"
+    }
+}

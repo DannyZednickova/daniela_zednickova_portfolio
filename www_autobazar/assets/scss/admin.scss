@@ -1,0 +1,26 @@
+.admin-box  {
+  display: block;
+  padding: 1em;
+
+}
+
+.fa-user, .fa-lock {
+  padding-bottom:1em;
+}
+.log-in-button {
+  margin-bottom: 1em;
+}
+
+input.form-login {
+
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    padding: 0.4em;
+    margin-left: 1em;
+    border: 0.04em dotted red;
+}
+
+.input-group {
+      margin-left: -2em;
+}

@@ -1,0 +1,500 @@
+27 Aug 2020, 23:01
+-----------------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'posts.tagscsc' doesn't exist in [ C:\www\www_autobazar\_inc\config.php : 37] 
+
+10 Oct 2020, 9:13
+-----------------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'posts.poss' doesn't exist in [ C:\www\www_autobazar\post.php : 11] 
+
+30 Oct 2020, 13:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN150001AND200000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 13:45
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 13:45
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 13:48
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 13:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:02
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:11
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:13
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:22
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:25
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:27
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:27
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:28
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:29
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 0 AND 2000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:29
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:34
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:34
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:35
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:35
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:36
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:37
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:38
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:46
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:58
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 14:59
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 15:04
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rok BETWEEN 2016 AND 2019' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:32
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2016 AND 2019 AND kilometry BETWEEN 0 AND 50000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:42
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:43
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:43
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:45
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:46
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:48
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 250001 AND 500000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+30 Oct 2020, 16:51
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 0 AND 50000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 0 AND 2000 AND kilometry BETWEEN 150001 AND 200000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:24
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 0 AND 2000 AND kilometry BETWEEN 150001 AND 200000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:24
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:27
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:28
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:29
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 0 AND 2050 AND kilometry BETWEEN 0 AND 700000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:30
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 0 AND 2050 AND kilometry BETWEEN 0 AND 700000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:33
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 0 AND 2050 AND kilometry BETWEEN 0 AND 700000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:33
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 1 AND 2000 AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:35
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 0 AND 50000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:36
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND  AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:36
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND  AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:36
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND  AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:36
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:37
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:38
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:38
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:38
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 100001 AND 150000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:39
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:39
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:43
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND  AND kilometry BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005 AND kilometry BETWEEN 0 AND 50000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:44
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 10:45
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:02
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:06
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 1 AND  AND kilometry BETWEEN 1 AND  AND cena BETWEEN 1 AND  AND ' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:06
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 1 AND  AND cena BETWEEN 1 AND  AND dph = 1' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:08
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 1 AND  AND cena BETWEEN 1 AND  AND dph = 1' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:14
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:34
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:35
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN  AND' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:39
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:39
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2006 AND 2010' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:52
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND dph = 1' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:54
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2006 AND 2010' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:55
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 11:55
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 50001 AND 100000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:13
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:13
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:14
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:14
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:15
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2001 AND 2005' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 12:15
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ? rok BETWEEN 2011 AND 2011' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 14:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 14:31
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2016 AND 2019 AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 14:35
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND dph = 1' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 14:50
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND kilometry BETWEEN 200001 AND 250000' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 15:08
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND rok BETWEEN 2006 AND 2010' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+1 Nov 2020, 15:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN 2016 AND 2019' at line 1 in [ C:\www\www_autobazar\cars.php : 14] 
+
+26 Dec 2020, 19:28
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY cena DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+26 Dec 2020, 19:30
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$order' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+26 Dec 2020, 19:30
+-----------------------------
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cenaASC' in 'order clause' in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:49
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY cena ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:50
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DSC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:50
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DSC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:50
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DSC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 14:54
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 15:18
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry DESC  ORDER BY kilometry ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:22
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry DESC  ORDER BY kilometry ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:22
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry DESC  ORDER BY kilometry ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry DESC  ORDER BY kilometry ASC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:23
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry ASC  ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:26
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry ASC  ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:27
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry ASC  ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:27
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY kilometry ASC  ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+
+27 Dec 2020, 16:28
+-----------------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY cena DESC  ORDER BY kilometry ASC  ORDER BY kilometry DESC' at line 1 in [ C:\www\www_autobazar\cars.php : 11] 
+

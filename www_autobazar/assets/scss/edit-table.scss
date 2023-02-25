@@ -1,0 +1,60 @@
+
+.fa-edit {
+  font-size: 1.7em;
+  color:green;
+}
+
+.fa-times {
+  font-size: 1.7em;
+    color:red;
+}
+
+span.insert-time {
+  font-size: 1em;
+}
+.edit-list-box-header {
+    width:80em;
+  background-color:grey;
+  height:auto;
+  border-bottom:0.03em dotted red;
+  border-radius:0.5em;
+  padding:1em;
+  display:flex;
+  justify-content:space-between;
+  color:ghostwhite;
+  margin-bottom: 1em;
+
+}
+.edit-list-box {
+  width:80em;
+  background-color:lightgrey;
+  height:auto;
+  border-bottom:0.03em dotted red;
+  border-radius:0.5em;
+  padding:1em;
+  display:flex;
+  justify-content:space-between;
+  color:grey;
+  &:hover{
+    background-color:#c1b9b9;
+    cursor: pointer;
+    color:ghostwhite;
+  }
+}
+
+.edit-list-actions {
+  overflow: hidden;
+  display:flex;
+    flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+.edit-list-update-date {
+  padding-left:4em;
+      padding-top: 0.3em;
+}
+
+.edit-list-car{
+      padding-top: 0.3em;
+}

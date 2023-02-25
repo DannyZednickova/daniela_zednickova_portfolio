@@ -1,0 +1,8 @@
+input.form-insert {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  padding: 0.4em;
+  margin-left: 1em;
+  border: 0.04em dotted red;
+  width: 50%; }
