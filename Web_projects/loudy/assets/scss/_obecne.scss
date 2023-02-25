@@ -1,0 +1,449 @@
+@import 'variables.scss';
+@import '_bounce_animace.scss';
+
+
+//LOADINF STRANKY
+.loader {
+	position:fixed;
+	z-index:100000000000;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba( 255, 255, 255, 1) ;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.loader.hidden {
+	animation: fadeOut 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	100% {
+		opacity:0;
+		visibility: hidden;
+	}
+}
+
+
+//loading AJAXU!!
+
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, 1)  
+                url('https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+
+html.loading .modal 
+{
+    overflow: hidden;   
+}
+
+
+html.loading .modal {
+    display: block;
+}
+
+//VRCHNÍ BAR
+
+.btn .fa {
+  margin-left: 0.185em;
+}
+
+.background {
+	 background: fixed;
+	background-repeat: no-repeat;
+	 background-size: cover; 
+	 background-position: center center;
+}
+
+
+.follow-us {
+	display: block;
+    width: 21.875em;
+    outline: solid 2px white;
+	-webkit-transition: outline 0.6s linear;
+	-o-transition: outline 0.6s linear;
+	transition: outline 0.6s linear;
+    padding: 0.3em 1em;
+    &:hover {
+    	outline-width: 0.65em;
+    }
+
+}
+
+
+.logo {
+	display:block;
+	position:relative;
+	background: #00000045;
+	color:white;
+	padding:1.5em;
+	width: 25em;
+	top:-12.5em;
+	left:6.25em;
+}
+
+
+
+.title {
+	display:block;
+	position:relative;
+	background: transparent;
+	color:white;
+	padding:1.5em;
+	width: 31.25em;
+	top:-37.5em;
+	left: 6.25em;
+}
+
+
+
+
+
+//SCROLL BACK TO TOP
+
+.back-to-top {
+  font-size: 4em;
+  display: block;
+  color: red;
+  position:  fixed;
+  bottom: 5px;
+  right: 20px;
+  display: block;
+  opacity:  0.85;
+}
+
+
+.back-to-top:hover,
+.back-to-top:focus {
+  opacity: 1;
+  transition:  opacity 0.6;
+
+}
+
+
+
+//PARŤÁCI
+
+.partners {
+    display: flex-start;
+	& .sponzorimg {
+	max-width: 10em;
+	height: auto;
+	}
+}
+
+ .container h3 {
+ 	padding:1em;
+ }
+
+
+
+
+
+
+
+//NOVINKY
+.card-columns {
+	box-shadow:  -7px 4px 34px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -7px 4px 34px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -7px 4px 34px 0px rgba(0,0,0,0.75);
+}
+
+.arrow {
+	max-width: 70%;
+	opacity: 0.4;
+}
+
+.box-container {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:distribute;
+	justify-content:space-around;
+	padding-top:0.6em;
+
+}
+
+.box-quote {
+	display:block;
+	width:25em;
+	height:auto;
+	padding:1em;
+	margin:1em;
+
+}
+
+
+.card {
+	padding-bottom:2em;
+}
+
+
+.bounce-left,
+.bounce-right {
+	margin:0 em;
+}
+
+
+iframe {
+	width: 100%;
+	height: 14em;
+}
+
+.quotes {
+	margin:0 em;
+}
+
+.quotes p {
+	margin:0 em;
+	line-height: 1em;
+}
+
+
+
+
+//NAVIGACE
+
+
+//DROP MENU 
+ #menu {
+ 	    text-transform: uppercase;
+ }
+
+
+#menu-hamburger {
+	display:none;
+}
+
+
+.nav-hamburger {
+	 display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 1em;
+    text-transform: uppercase;
+
+}
+
+
+
+
+
+
+
+.fab {
+	font-size: 1.4em;
+}
+
+
+ul.navigation {
+
+   margin: 1em 0em 1em 3em;
+   display:-webkit-box;
+   display:-ms-flexbox;
+   display:flex;
+}
+
+
+ul li.nav {
+    margin-top: 0.4em;
+    display: block;
+    float: left;
+    margin-left: 4em;
+    margin-bottom: 1em;
+
+
+}
+
+.navbar {
+    background: #0000004a;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+     -webkit-transition: all 1s ease;
+     -o-transition: all 1s ease;
+     transition: all 1s ease;
+
+}
+
+.scroll-nav {
+ background: #000000ad;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+
+li.endurotulaci {
+	color:grey;
+	font-size:1.5em;
+}
+
+
+.current {
+    background: #00000052;
+    padding: 0.4em 1.4em; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//KDO JSME
+
+article.weare {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+
+
+.about-us {
+	font-size: 0.8em;
+}
+
+.enduro-wrap {
+	 display: flex;
+    justify-content: space-between;
+
+}
+
+.enduro-stick {
+	margin-top: 6em;
+}
+
+.enduro-photo {
+	max-width: 50%;
+}
+
+.photo-flex {
+	display:flex;
+}
+
+
+
+
+
+
+
+
+//AFRIKA ČLÁNEK
+
+.table {
+	margin:2em;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+    border-top:none;
+}
+
+
+.akordeon {
+	width: 80%;
+    margin: 0 auto;
+}
+
+dd {
+		text-align: left;
+}
+
+
+
+dt {
+	display: flex;
+	justify-content: space-between;
+	cursor:crosshair;
+	margin: 0 auto;
+	font-weight: 700;
+	padding: 1em;
+	max-width: 100%;
+	text-align: left;
+	border-bottom: 1px dotted grey;
+}
+
+.map {
+   		width: 80%;
+}
+
+//GALERIE
+//
+//
+.btn {
+	width: 30em;
+    margin-bottom: 0.5em;
+}
+.galery-names {
+	padding-bottom: 0.9em;
+}
+.galerry {
+	padding-bottom: 1em;
+    width: 100%;
+}
+
+p.galery-links {
+	padding:1em;
+}
+
+.galery{
+	text-align: center
+}
+
+
+.articles {
+	font-size: x-large;
+}
+
+//articles - "napsali o nas"
+
+
+//contacts
+	.contact {
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+	.details {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.fa-envelope-open-text {
+		margin-right: 0.3em;
+		font-size: 2em;
+		color: red;
+
+	}

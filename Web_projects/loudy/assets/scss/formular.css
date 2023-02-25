@@ -1,0 +1,11 @@
+input, textarea {
+  border: 0.1em dotted grey;
+  margin: 1em;
+  padding: 1em;
+}
+
+input.submit {
+  border: none;
+}
+
+/*# sourceMappingURL=formular.css.map */

@@ -1,0 +1,92 @@
+@import 'variables.scss';
+
+
+
+/**
+ * GENERAL
+ */
+html {
+	box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+ h1, h2, h3, {
+ 	font-family: 'Anton', ;
+}
+
+
+h6 {
+  line-height: 1.7;
+}
+
+blockquote {
+
+	font-size: 1em;
+}
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+
+
+ul {
+	list-style:none;
+
+}
+
+
+
+a {
+	color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    &:hover {
+    	color: #fff;
+    	text-decoration: none;
+    }
+}
+
+
+p{
+	margin:1em;
+}
+
+
+.container {
+	text-align: center;
+	margin:10em;
+	background: white;
+
+	max-width:1400px;
+	margin:0 auto;
+	text-align: center;
+
+
+}
+
+
+.container.smaller {
+	text-align: center;
+	background: #80808014;
+	max-width:1000px;
+	margin:0 auto;
+	text-align: center;
+
+}
+
+
+
+
+
+
+
+
