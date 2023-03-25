@@ -44,7 +44,10 @@ class Ui_Form(object):
         self.comboLanguage = None
 
     def format_key_and_alpha(self, string):
-        """This function formats input key for cipher and also format."""
+        """This function formats input key for cipher and also format.
+        :param  string: formats string of key input
+        :return: formated key
+        """
         string = string.replace(" ", "")
         string = ''.join("" if c.isdigit() else c for c in string)
         string = string.upper()
@@ -60,7 +63,10 @@ class Ui_Form(object):
         return removed_duplicate
 
     def text_format(self, text):
-        """This function make sure, that the text input has proper text format."""
+        """This function make sure, that the text input has proper text format.
+        :param text: format text that is going to be ciphered
+        :return: formated text for cipher
+        """
         new_text = ""
         for t in text:
             if t in self.special.keys():
@@ -73,7 +79,10 @@ class Ui_Form(object):
         return new_text
 
     def alpha_random(self, original_aplh):
-        """Makes a random aplhapbet."""
+        """Makes a random aplhapbet.
+        :param original_aplh: takes original alphabet based on choice of short/full alphabet
+        :return: returns random created alphabet for cipher
+        """
         random_alph = []
         i = len(original_aplh) - 1
         while original_aplh:
@@ -83,7 +92,11 @@ class Ui_Form(object):
         return random_alph
 
     def random_table_aplhas(self, random_apha_list, switch_mode):
-        """Makes a table from random alphabet."""
+        """Makes a table from random alphabet.
+        :param random_apha_list, switch_mode:
+        :return: returns formated alphabet in matrix / array
+        """
+
         if switch_mode == 0:
             elements = []
             for i in random_apha_list:
@@ -106,13 +119,15 @@ class Ui_Form(object):
                 elements = elements[6:]
             return matrix
 
-    def encode_text(self, test_matrix, textik):
+    def encode_text(self, text_matrix, texts):
         """The function returns paired text. The argument is a classic matrix,
-        then it is converted to an np array to find an index.
+        then it is converted to a np array to find an index.
+        :param text_matrix, texts: takes alpha matrix and text that is supposed to be encoded
+        :return: ciphered text
         """
-        arr = np.array(test_matrix)
+        arr = np.array(text_matrix)
         ciphered_text = ''
-        for char in textik:
+        for char in texts:
             result = np.where(arr == char)
             result = list(zip(result[0], result[1]))
             for key, value in self.index_col_alh.items():
@@ -121,14 +136,15 @@ class Ui_Form(object):
             for key, value in self.index_row_alh.items():
                 if result[0][1] == key:
                     ciphered_text += value
+
         return ciphered_text
 
     def cipher_list(self, ciphered_text, key):
         """Return the letters that pass first
         encryption stages in the ADVFX matrix. It already returns it in
         letters that depend on lenght of a key.
-        :param ciphered_text, key:
-        :return:
+        :param ciphered_text, key: takes formated ciphered text
+        :return: cipher in list
         """
         len_key = len(key)
         ciphered_text = ' '.join(
@@ -160,7 +176,7 @@ class Ui_Form(object):
     def key_list(self, plain_key):
         """This function makes from plain key sorted key list for principal of the cipher.
         :param plain_key:
-        :return:
+        :return: sorted key
         """
         key_char_index = 0
         list_sorted_key = []
@@ -173,7 +189,7 @@ class Ui_Form(object):
     def get_final_encoded_cipher(self, key_sorted, matrix):
         """This function takes sorted key and matrix and makes a final cipher.
         :param key_sorted, matrix:
-        :return:
+        :return: final cipher
         """
         ciphered_text_final = ''
         for item in key_sorted:
@@ -186,8 +202,8 @@ class Ui_Form(object):
 
     def decode_get_cipher_into_list_again(self, cipher):
         """There will be a docstring.
-        :param cipher:
-        :return:
+        :param cipher: takes cipeher to be decoded
+        :return: cipher in list
         """
         cipher_in_list = []
         help = []
@@ -212,8 +228,8 @@ class Ui_Form(object):
     def decode_trans_list_order(self, sorted_key, matrix):
         """It takes the cipher and breaks it back into the table.
         It divides it based on " " - create a new table after the space.
-        :param sorted_key, matrix:
-        :return:
+        :param sorted_key, matrix: sorted key and matrix alphabet
+        :return: ordered list
         """
         nums_of_order = ''
         i = 0
@@ -225,14 +241,12 @@ class Ui_Form(object):
         list_order = []
         for row in nums_of_order:
             list_order.append(matrix[int(row)])
-
-        print(list_order)
         return list_order
 
     def decode_full_fill_list(self, sorted_key, decode_list):
-        """Takes a deciphered plain text and fill it to list.
+        """Takes a deciphered plain text and fill it to list. Formating.
         :param sorted_key, decode_list:
-        :return:
+        :return: formated decode list
         """
         num_rows = len(decode_list[0])
         i = 0
@@ -244,13 +258,12 @@ class Ui_Form(object):
                 decode_list[i].append(" ")
             tmp = 0
             i += 1
-        print(decode_list)
         return decode_list
 
     def decode_get_it_from_matrix(self, matrix, sorted_key):
         """From list make a string.
         :param matrix, sorted_key:
-        :return:
+        :return var:  
         """
         i = 0
         var = ""
@@ -258,7 +271,7 @@ class Ui_Form(object):
             for element in range(0, len(sorted_key)):
                 var += str(matrix[element][i])
             i += 1
-        print(var)
+
         return var
 
     def decode_text(self, textik):
@@ -282,7 +295,6 @@ class Ui_Form(object):
             i += 1
         cipher_in_list.append(help)
         cipher_in_list = [ele for ele in cipher_in_list if ele != []]
-        print(cipher_in_list)
         return cipher_in_list
 
     def decode_final_decode_to_normal(self, cipher_in_list_almost_final, matrix):
@@ -313,7 +325,6 @@ class Ui_Form(object):
             first = int(temp_list[i][0])
             second = int(temp_list[i][1])
             final_string += matrix[first][second]
-        print(final_string)
         return final_string
 
     def get_normal_text_back(self, text):
@@ -376,7 +387,6 @@ class Ui_Form(object):
         line = 0
         row = 0
         lenght = len(matrix)
-        print(lenght)
         for char in matrix_string:
             self.tabulkaAbecedy.setColumnCount(lenght)
             self.tabulkaAbecedy.setRowCount(lenght)
@@ -446,18 +456,13 @@ class Ui_Form(object):
                     sifrovaci_abeceda) == 25 and self.comboMatrix.currentText() == "ADFGX" and self.comboMatrix.currentText() == "CZ":
                 sifrovaci_abeceda.replace("W", "V")
                 self.labelPouzitaAbeceda.setText(sifrovaci_abeceda)
-                # print(sifrovaci_abeceda)
                 alph_cz_list = []
                 for char in sifrovaci_abeceda:
                     alph_cz_list.append(char)
-                # print(alph_cz_list)
                 alph_cz_matrix = self.random_table_aplhas(alph_cz_list, 0)
-                print(alph_cz_matrix)
                 self.fill_table(alph_cz_matrix, sifrovaci_abeceda)
                 prvni_faze_sifry = self.encode_text(alph_cz_matrix, otevreny_text)
-                # print(prvni_faze_sifry)
                 dva_cipher_list = self.cipher_list(prvni_faze_sifry, klic)
-                # print(dva_cipher_list)
                 usporadat_klic = self.key_list(klic)
                 hotova_sifra = self.get_final_encoded_cipher(usporadat_klic, dva_cipher_list)
                 self.sifrovanyText.setText(hotova_sifra)
@@ -468,18 +473,13 @@ class Ui_Form(object):
                     sifrovaci_abeceda) == 25 and self.comboMatrix.currentText() == "ADFGX" and self.comboMatrix.currentText() == "ENG":
                 sifrovaci_abeceda.replace("J", "I")
                 self.labelPouzitaAbeceda.setText(sifrovaci_abeceda)
-                # print(sifrovaci_abeceda)
                 alph_cz_list = []
                 for char in sifrovaci_abeceda:
                     alph_cz_list.append(char)
-                # print(alph_cz_list)
                 alph_cz_matrix = self.random_table_aplhas(alph_cz_list, 0)
-                print(alph_cz_matrix)
                 self.fill_table(alph_cz_matrix, sifrovaci_abeceda)
                 prvni_faze_sifry = self.encode_text(alph_cz_matrix, otevreny_text)
-                # print(prvni_faze_sifry)
                 dva_cipher_list = self.cipher_list(prvni_faze_sifry, klic)
-                # print(dva_cipher_list)
                 usporadat_klic = self.key_list(klic)
                 hotova_sifra = self.get_final_encoded_cipher(usporadat_klic, dva_cipher_list)
                 self.sifrovanyText.setText(hotova_sifra)
@@ -489,17 +489,12 @@ class Ui_Form(object):
 
             elif len(sifrovaci_abeceda) == 35 and self.comboMatrix.currentText() == "ADFGVX":
                 self.labelPouzitaAbeceda.setText(sifrovaci_abeceda)
-                # print(sifrovaci_abeceda)
                 alph_six_list = []
                 for char in sifrovaci_abeceda:
                     alph_six_list.append(char)
-                # print(alph_six_list)
                 alph_cz_matrix = self.random_table_aplhas(alph_six_list, 1)
-                # print(alph_cz_matrix)
                 prvni_faze_sifry = self.encode_text(alph_cz_matrix, otevreny_text)
-                # print(prvni_faze_sifry)
                 dva_cipher_list = self.cipher_list(prvni_faze_sifry, klic)
-                print(dva_cipher_list)
                 usporadat_klic = self.key_list(klic)
                 hotova_sifra = self.get_final_encoded_cipher(usporadat_klic, dva_cipher_list)
                 self.sifrovanyText.setText(hotova_sifra)
@@ -529,21 +524,13 @@ class Ui_Form(object):
             for char in sifrovaci_abeceda:
                 alph_cz_list.append(char)
             matrix = self.random_table_aplhas(alph_cz_list, 0)
-            print(matrix)
             self.fill_table(matrix, sifrovaci_abeceda)
             sifra_v_listu_jedna = self.decode_get_cipher_into_list_again(sifra)
-            print(sifra_v_listu_jedna)
-            print(usporadat_klic)
             sifra_v_listu_dva = self.decode_trans_list_order(usporadat_klic, sifra_v_listu_jedna)
-            print(sifra_v_listu_dva)
             sifra_v_listu_tri = self.decode_full_fill_list(usporadat_klic, sifra_v_listu_dva)
-            print(sifra_v_listu_tri)
             sifrovany_string = self.decode_get_it_from_matrix(sifra_v_listu_tri, usporadat_klic)
-            print(sifrovany_string)
             predposledni_sifra = self.decode_text(sifrovany_string)
-            print(predposledni_sifra)
             hotova_sifra = self.decode_final_decode_to_normal(predposledni_sifra, matrix)
-            print(hotova_sifra)
             text_desifr = self.get_normal_text_back(hotova_sifra)
             self.zobrazeniSifer.setText(text_desifr)
             self.warning.setText("")
@@ -555,21 +542,13 @@ class Ui_Form(object):
             for char in sifrovaci_abeceda:
                 alph_cz_list.append(char)
             matrix = self.random_table_aplhas(alph_cz_list, 0)
-            print(matrix)
             self.fill_table(matrix, sifrovaci_abeceda)
             sifra_v_listu_jedna = self.decode_get_cipher_into_list_again(sifra)
-            print(sifra_v_listu_jedna)
-            print(usporadat_klic)
             sifra_v_listu_dva = self.decode_trans_list_order(usporadat_klic, sifra_v_listu_jedna)
-            print(sifra_v_listu_dva)
             sifra_v_listu_tri = self.decode_full_fill_list(usporadat_klic, sifra_v_listu_dva)
-            print(sifra_v_listu_tri)
             sifrovany_string = self.decode_get_it_from_matrix(sifra_v_listu_tri, usporadat_klic)
-            print(sifrovany_string)
             predposledni_sifra = self.decode_text(sifrovany_string)
-            print(predposledni_sifra)
             hotova_sifra = self.decode_final_decode_to_normal(predposledni_sifra, matrix)
-            print(hotova_sifra)
             text_desifr = self.get_normal_text_back(hotova_sifra)
             self.zobrazeniSifer.setText(text_desifr)
             self.warning.setText("")
@@ -579,21 +558,13 @@ class Ui_Form(object):
             for char in sifrovaci_abeceda:
                 alph_cz_list.append(char)
             matrix = self.random_table_aplhas(alph_cz_list, 1)
-            print(matrix)
             self.fill_table(matrix, sifrovaci_abeceda)
             sifra_v_listu_jedna = self.decode_get_cipher_into_list_again(sifra)
-            print(sifra_v_listu_jedna)
-            print(usporadat_klic)
             sifra_v_listu_dva = self.decode_trans_list_order(usporadat_klic, sifra_v_listu_jedna)
-            print(sifra_v_listu_dva)
             sifra_v_listu_tri = self.decode_full_fill_list(usporadat_klic, sifra_v_listu_dva)
-            print(sifra_v_listu_tri)
             sifrovany_string = self.decode_get_it_from_matrix(sifra_v_listu_tri, usporadat_klic)
-            print(sifrovany_string)
             predposledni_sifra = self.decode_text(sifrovany_string)
-            print(predposledni_sifra)
             hotova_sifra = self.decode_final_decode_to_normal(predposledni_sifra, matrix)
-            print(hotova_sifra)
             text_desifr = self.get_normal_text_back(hotova_sifra)
             self.zobrazeniSifer.setText(text_desifr)
             self.warning.setText("")
